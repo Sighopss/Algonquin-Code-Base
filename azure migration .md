@@ -28,59 +28,18 @@ To make this migration smooth, I’d need to understand their current setup\. He
 
 ## <a id="_mgyzh21a5182"></a>__RACI Matrix: Who’s Doing What__
 
-__Stakeholder__
+# RACI Table
 
-__Responsible \(R\)__
+| Stakeholder         | Responsible (R)          | Accountable (A)       | Consulted (C)            | Informed (I)        |
+|---------------------|--------------------------|-----------------------|--------------------------|---------------------|
+| Project Manager     | Plans, executes migration | Owns project success  |                          |                     |
+| IT/DevOps Team      | Tech setup, testing       |                       | Advises architecture     |                     |
+| Business Units      |                          | Aligns business needs | Shares user needs        | Gets updates        |
+| Microsoft (Azure)   |                          |                       | Shares best practices    | Hears milestones    |
+| Executives          |                          | Approves decisions    |                          | Gets reports        |
+| Security/Compliance | Configures security       | Ensures compliance    | Assesses risks           |                     |
+| Consultants         |                          |                       | Offers SAP expertise     |                     |
 
-__Accountable \(A\)__
-
-__Consulted \(C\)__
-
-__Informed \(I\)__
-
-Project Manager
-
-Plans, runs migration
-
-Owns project success
-
-IT/DevOps Team
-
-Tech setup, testing
-
-Advises architecture
-
-Business Units
-
-Aligns business needs
-
-Shares user needs
-
-Gets updates
-
-Microsoft \(Azure\)
-
-Shares best practices
-
-Hears milestones
-
-Executives
-
-Approves decisions
-
-Gets reports
-
-Security/Compliance
-
-Configures security
-
-Ensures compliance
-
-Assesses risks
-
-Consultants
-
-Offers SAP expertise
 
 ## <a id="_naxu1wn60dtd"></a>__Migration Approach__
 
