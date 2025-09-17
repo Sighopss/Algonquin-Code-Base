@@ -56,15 +56,31 @@ graph TB
 ```
 # Web Application Deployment Guide
 
-The document describes how a web app consisting of a **React frontend**, **Flask backend**, and **postgres database** can be deployed using different infrastructure models: **IaaS**, **PaaS**, and **On-Premises**.
+This document describes how a web application consisting of a **React frontend**, **Flask backend**, and **Postgres database** can be deployed using different infrastructure models: **PaaS**, **IaaS**, and **On-Premises**.
 
 ---
 
-## 1. Deployment Using IaaS (Infrastructure as a Service)
+## 1. Deployment Using PaaS (Platform as a Service)
+
+In a PaaS deployment, the cloud provider manages most of the infrastructure, allowing developers to focus primarily on the application and data. Providers include Heroku, Render, and Azure App Service.
+
+- The **React frontend** runs in the user's browser.  
+- The **Flask backend** is deployed as a managed application service.  
+- **Postgres** is provided as a managed database service by the cloud provider.  
+- **Application-level firewalls** protect the services, and a **cloud load balancer** distributes incoming traffic automatically.
+
+**Key Points:**  
+- The cloud provider handles servers, operating system updates, scaling, and high availability.  
+- Users focus on maintaining application code and database configuration.  
+- Ideal for rapid deployment, simplified scaling, and reduced operational overhead.
+
+---
+
+## 2. Deployment Using IaaS (Infrastructure as a Service)
 
 In an IaaS deployment, virtual machines (VMs) are provisioned in a cloud environment such as AWS EC2, Azure Virtual Machines, or Google Cloud Compute Engine.
 
-- The **React frontend** runs in the user's browser, while the **flask backend** is hosted on a Virtual Machine  
+- The **React frontend** runs in the user's browser, while the **Flask backend** is hosted on a VM.  
 - The **Postgres database** is hosted on a separate VM to isolate data and improve performance.  
 - Security is implemented using **firewalls** at both the network perimeter and internally between the web server and database.  
 - A **load balancer** distributes user traffic across one or more VMs running the web server, providing better availability and scalability.
@@ -73,22 +89,6 @@ In an IaaS deployment, virtual machines (VMs) are provisioned in a cloud environ
 - The user manages the operating system, security patches, and software stack.  
 - Offers flexibility to configure servers, network rules, and scaling policies manually.  
 - Ideal for teams that need full control over infrastructure while leveraging cloud resources.
-
----
-
-## 2. Deployment Using PaaS (Platform as a Service)
-
-In a PaaS deployment, the cloud provider manages most of the infrastructure, allowing developers to focus on the application and data. Providers include Heroku, Render, and Azure App Service.
-
-- The **React frontend** runs in the user's browser.  
-- The **Flask backend** is deployed as a managed application service.  
-- **Postgres** is provided as a managed database service by the cloud provider.  
-- **Application-level firewalls** protect the services, while a **cloud load balancer** automatically distributes incoming traffic.
-
-**Key Points:**  
-- The cloud provider handles server management, operating system updates, scaling, and high availability.  
-- Users focus on maintaining the application code and database configuration.  
-- Ideal for rapid deployment, simplified scaling, and reduced operational overhead.
 
 ---
 
@@ -111,5 +111,4 @@ In an On-Premises setup, the application is hosted on physical servers located i
 ---
 
 This guide provides an overview of how a **React + Flask + Postgres** application can be deployed in different infrastructure environments, highlighting the differences in control, responsibility, and operational effort for each deployment model.
-
 
