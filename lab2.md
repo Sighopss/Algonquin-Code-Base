@@ -1,5 +1,4 @@
 PaaS
-```mermaid
 graph TB
     subgraph User["End User"]
         UI[React Frontend in Browser]
@@ -15,7 +14,6 @@ graph TB
 
     UI --> Firewall --> LoadBalancer --> AppServer
     AppServer --> Database
-```
 Iaas
 ```mermaid
 graph TB
