@@ -79,9 +79,9 @@ graph TB
     User_Interface --> Outer_FW --> Hardware_LB --> Server_1
     --> Inner_FW --> Server_2
 ```
-# Web Application Deployment Guide
+# web application deployment guide
 
-This document describes how a web application consisting of a **React frontend**, **Flask backend**, and **Postgres database** can be deployed using different infrastructure models: **PaaS**, **IaaS**, and the one **On-Premises**.
+This document describes how a web application consisting of a **react frontend**, **flask backend**, and **Postgres database** can be deployed using different infrastructure models: **PaaS**, **IaaS**, and the one **On-Premises**.
 
 ---
 
@@ -121,13 +121,13 @@ In an Iaas deployment, virtual machines (VMs) are provisioned in a cloud environ
 
 In an On-Premises setup, the application is hosted on physical servers located in the organization’s own data center.
 
-- The **React frontend** runs in the user's browser.  
-- The **Flask backend** and React components run on a dedicated physical server 
-- **Postgres** runs on a separate physical server to ensure data isolation and reliability.  
+- The **react frontend** runs in the user's browser.  
+- The **flask backend** and React components run on a dedicated physical server 
+- **postgres** runs on a separate physical server to ensure data isolation and reliability.  
 - Security is enforced using **perimeter firewalls** and **internal firewalls** between the web server and database.  
 - **Hardware load balancers** distribute traffic across web servers for performance and redundancy.
 
-**Key Pointers:**  
+**key Pointers:**  
 - Full control over hardware, software, and network configuration 
 - Ideal for organizations with strict compliance, security, or data residency requirements.  
 - All responsibilities, including updates, backups, scaling, and security, fall on the organization.  
