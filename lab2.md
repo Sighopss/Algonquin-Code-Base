@@ -63,7 +63,7 @@ graph TB
 
     end
 
-    Outer_FW[Perimeter Firewall]
+    Outer_FW[Perimeter_Firewall]
 
     Hardware_LB[On-Prem Load Balancer]
 
@@ -71,8 +71,8 @@ graph TB
 
         Server_1[Physical Server: Flask + React]
 
-        Inner_FW[Internal Firewalls]
-        Server_2[(Physical Server: Postgres Database)]
+        Inner_FW[Internal_Firewalls]
+        Server_2[(Physical Server: Postgres_Database)]
 
     end
 
@@ -87,14 +87,14 @@ This document describes how a web application consisting of a **React frontend**
 
 ## 1. Deployment on PaaS (Platform as a Service)
 
-In a PaaS deployment, the cloud provider manages most of the infrastructure, allowing developers to focus primarily on the application and data. Providers include Heroku, Render, and Azure App Service.
+In a PaaS deployment, the cloud provider manages most of the infrastructure, which allows developers to focus primarily on the application and data. Providers include Heroku, Render, and Azure App Service.
 
 - The **React frontend** runs in the users browser 
 - The **Flask backend** is deployed as a managed application service  
 - **Postgres** is provided as a managed database service by the cloud provider
-- **Application-level firewalls** protect the services, and a **cloud load balancer** distributes incoming traffic automatically(prevent DDOS)
+- **Application-level firewalls** protect the services, and a **cloud load balancer** distributes incoming traffic automatically(preventing potential DDOS)
 
-**Key Points:**  
+**Key Pointers:**  
 - The cloud provider handles servers, operating system updates, scaling, and high availabilities
 - Users focus on maintaining application code and database configuration
 - Ideal for rapid deployment, simplified scaling, and reduced operational overhead
