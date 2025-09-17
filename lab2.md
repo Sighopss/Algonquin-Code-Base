@@ -47,28 +47,37 @@ graph TB
 
     end
 
-    UI --> PerimeterFW --> CloudLB --> VM1
+    UI --> PerimeterFW --> CloudLB --> 
 
     VM1 --> InternalFW --> VM2
 ```
 On-Prem
 ```mermaid
+
 graph TB
+
     subgraph User["End_User"]
+
         UI[react frontend in browser]
+
+
     end
 
     OuterFW[Perimeter Firewall]
+
     HardwareLB[On-Prem Load Balancer]
 
     subgraph OnPrem["On-Premise Setup (Data_Center)"]
+
         Server1[Physical Server: Flask + React]
+
         InnerFW[Internal Firewalls]
         Server2[(Physical Server: Postgres Database)]
+
     end
 
     UI --> OuterFw --> HardwareLB --> Server1
-    Server1 --> InnerFW --> Server2
+    --> InnerFW --> Server2
 ```
 # Web Application Deployment Guide
 
@@ -125,3 +134,4 @@ In an On-Premises setup, the application is hosted on physical servers located i
 - Higher upfront costs and maintenance compared to cloud solutions
 
 ---
+
