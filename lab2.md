@@ -2,11 +2,11 @@ PaaS
 ```mermaid
 graph TB
     subgraph User["End User"]
-        UI[React Frontend in Browser]
+        UI[react frontend in browser]
     end
 
     Firewall[Application Firewall]
-    LoadBalancer[Cloud Load Balancer]
+    LoadBalancer[cloud load balancer]
 
     subgraph PaaS["PaaS Setup (Azure)"]
         AppServer[Flask Web Server]
@@ -19,7 +19,7 @@ graph TB
 Iaas
 ```mermaid
 graph TB
-    subgraph User["End User"]
+    subgraph User["Enduser"]
         UI[React Frontend in Browser]
     end
 
@@ -39,7 +39,7 @@ On-Prem
 ```mermaid
 graph TB
     subgraph User["End_User"]
-        UI[React Frontend in Browser]
+        UI[react frontend in browser]
     end
 
     OuterFW[Perimeter Firewall]
