@@ -60,7 +60,7 @@ The document describes how a web application consisting of a **React frontend**,
 
 ---
 
-## 1. Deployment Using PaaS (Platform as a Service)
+## 1. Deployment on PaaS (Platform as a Service)
 
 In a PaaS deployment, the cloud provider manages most of the infrastructure, allowing developers to focus primarily on the application and data. Providers include Heroku, Render, and Azure App Service.
 
@@ -70,13 +70,13 @@ In a PaaS deployment, the cloud provider manages most of the infrastructure, all
 - **Application-level firewalls** protect the services, and a **cloud load balancer** distributes incoming traffic automatically
 
 **Key Points:**  
-- The cloud provider handles servers, operating system updates, scaling, and high availability 
+- The cloud provider handles servers, operating system updates, scaling, and high availabilities
 - Users focus on maintaining application code and database configuration
 - Ideal for rapid deployment, simplified scaling, and reduced operational overhead
 
 ---
 
-## 2. Deployment Using IaaS (Infrastructure-as-a-Service)
+## 2. Deployment on IaaS (Infrastructure-as-a-Service)
 
 In an Iaas deployment, virtual machines (VMs) are provisioned in a cloud environment such as AWS EC2, Azure Virtual Machines, or Google Cloud Compute Engine.
 
