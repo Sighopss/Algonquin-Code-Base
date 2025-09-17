@@ -56,7 +56,7 @@ graph TB
 ```
 # Web Application Deployment Guide
 
-This document describes how a web application consisting of a **React frontend**, **Flask backend**, and **Postgres database** can be deployed using different infrastructure models: **PaaS**, **IaaS**, and **On-Premises**.
+The document describes how a web application consisting of a **React frontend**, **Flask backend**, and **Postgres database** can be deployed using different infrastructure models: **PaaS**, **IaaS**, and **On-Premises**.
 
 ---
 
@@ -64,15 +64,15 @@ This document describes how a web application consisting of a **React frontend**
 
 In a PaaS deployment, the cloud provider manages most of the infrastructure, allowing developers to focus primarily on the application and data. Providers include Heroku, Render, and Azure App Service.
 
-- The **React frontend** runs in the user's browser.  
-- The **Flask backend** is deployed as a managed application service.  
-- **Postgres** is provided as a managed database service by the cloud provider.  
-- **Application-level firewalls** protect the services, and a **cloud load balancer** distributes incoming traffic automatically.
+- The **React frontend** runs in the users browser 
+- The **Flask backend** is deployed as a managed application service  
+- **Postgres** is provided as a managed database service by the cloud provider
+- **Application-level firewalls** protect the services, and a **cloud load balancer** distributes incoming traffic automatically
 
 **Key Points:**  
-- The cloud provider handles servers, operating system updates, scaling, and high availability.  
-- Users focus on maintaining application code and database configuration.  
-- Ideal for rapid deployment, simplified scaling, and reduced operational overhead.
+- The cloud provider handles servers, operating system updates, scaling, and high availability 
+- Users focus on maintaining application code and database configuration
+- Ideal for rapid deployment, simplified scaling, and reduced operational overhead
 
 ---
 
@@ -97,18 +97,18 @@ In an IaaS deployment, virtual machines (VMs) are provisioned in a cloud environ
 In an On-Premises setup, the application is hosted on physical servers located in the organization’s own data center.
 
 - The **React frontend** runs in the user's browser.  
-- The **Flask backend** and React components run on a dedicated physical server.  
+- The **Flask backend** and React components run on a dedicated physical server 
 - **Postgres** runs on a separate physical server to ensure data isolation and reliability.  
 - Security is enforced using **perimeter firewalls** and **internal firewalls** between the web server and database.  
 - **Hardware load balancers** distribute traffic across web servers for performance and redundancy.
 
 **Key Points:**  
-- Full control over hardware, software, and network configuration.  
+- Full control over hardware, software, and network configuration 
 - Ideal for organizations with strict compliance, security, or data residency requirements.  
 - All responsibilities, including updates, backups, scaling, and security, fall on the organization.  
-- Higher upfront costs and maintenance compared to cloud solutions.
+- Higher upfront costs and maintenance compared to cloud solutions
 
 ---
 
-This guide provides an overview of how a **React + Flask + Postgres** application can be deployed in different infrastructure environments, highlighting the differences in control, responsibility, and operational effort for each deployment model.
+
 
