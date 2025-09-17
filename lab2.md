@@ -76,7 +76,7 @@ graph TB
 
     end
 
-    UI --> OuterFw --> HardwareLB --> Server1
+    UI --> OuterFW --> HardwareLB --> Server1
     --> InnerFW --> Server2
 ```
 # Web Application Deployment Guide
