@@ -1,14 +1,13 @@
-PaaS
 ```mermaid
 graph TB
-    subgraph User["End_User"]
+    subgraph User["End User"]
         UI[React Frontend in Browser]
     end
 
-    Firewall[Application_Firewall]
+    Firewall[Application Firewall]
     LoadBalancer[Cloud Load Balancer]
 
-    subgraph PaaS["PaaS Setup (Azure]
+    subgraph PaaS["PaaS Setup (e.g. Heroku, Azure App Service, Render)"]
         AppServer[Flask Web Server]
         Database[(Managed Postgres Database)]
     end
