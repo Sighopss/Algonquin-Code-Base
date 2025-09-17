@@ -51,7 +51,7 @@ graph TB
         Server2[(Physical Server: Postgres Database)]
     end
 
-    UI --> OuterFW --> HardwareLB --> Server1
+    UI --> OuterFw --> HardwareLB --> Server1
     Server1 --> InnerFW --> Server2
 ```
 # Web Application Deployment Guide
@@ -76,16 +76,16 @@ In a PaaS deployment, the cloud provider manages most of the infrastructure, all
 
 ---
 
-## 2. Deployment Using IaaS (Infrastructure as a Service)
+## 2. Deployment Using IaaS (Infrastructure-as-a-Service)
 
-In an IaaS deployment, virtual machines (VMs) are provisioned in a cloud environment such as AWS EC2, Azure Virtual Machines, or Google Cloud Compute Engine.
+In an Iaas deployment, virtual machines (VMs) are provisioned in a cloud environment such as AWS EC2, Azure Virtual Machines, or Google Cloud Compute Engine.
 
 - The **React frontend** runs in the user's browser, while the **Flask backend** is hosted on a VM.  
 - The **Postgres database** is hosted on a separate VM to isolate data and improve performance.  
 - Security is implemented using **firewalls** at both the network perimeter and internally between the web server and database.  
 - A **load balancer** distributes user traffic across one or more VMs running the web server, providing better availability and scalability.
 
-**Key Points:**  
+**Key Pointers:**  
 - The user manages the operating system, security patches, and software stack.  
 - Offers flexibility to configure servers, network rules, and scaling policies manually.  
 - Ideal for teams that need full control over infrastructure while leveraging cloud resources.
@@ -102,7 +102,7 @@ In an On-Premises setup, the application is hosted on physical servers located i
 - Security is enforced using **perimeter firewalls** and **internal firewalls** between the web server and database.  
 - **Hardware load balancers** distribute traffic across web servers for performance and redundancy.
 
-**Key Points:**  
+**Key Pointers:**  
 - Full control over hardware, software, and network configuration 
 - Ideal for organizations with strict compliance, security, or data residency requirements.  
 - All responsibilities, including updates, backups, scaling, and security, fall on the organization.  
