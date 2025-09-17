@@ -83,7 +83,7 @@ graph TB
 
 This document describes how a web application consisting of a **react frontend**, **flask backend**, and **Postgres database** can be deployed using different infrastructure models: **PaaS**, **IaaS**, and the one **On-Premises**.
 
----
+
 
 ## 1. Deployment on PaaS (Platform as a Service)
 
@@ -99,7 +99,7 @@ In a PaaS deployment, the cloud provider manages most of the infrastructure, whi
 - Users focus on maintaining application code and database configuration
 - Ideal for rapid deployment, simplified scaling, and reduced operational overhead
 
----
+
 
 ## 2. Deployment on IaaS (Infrastructure-as-a-Service)
 
@@ -115,7 +115,7 @@ In an Iaas deployment, virtual machines (VMs) are provisioned in a cloud environ
 - Offers flexibility to configure servers, network rules, and scaling policies manually.  
 - Ideal for teams that need full control over infrastructure while leveraging cloud resources.
 
----
+
 
 ## 3. Deployment Using On-Premises Infrastructure
 
@@ -133,5 +133,5 @@ In an On-Premises setup, the application is hosted on physical servers located i
 - All responsibilities, including updates, backups, scaling, and security, fall on the organization.  
 - Higher upfront costs and maintenance compared to cloud solutions
 
----
+
 
