@@ -45,7 +45,7 @@ graph TB
     OuterFW[Perimeter Firewall]
     HardwareLB[On-Prem Load Balancer]
 
-    subgraph OnPrem["On-Premise Setup (The Data Center)"]
+    subgraph OnPrem["On-Premise Setup (Data_Center)"]
         Server1[Physical Server: Flask + React]
         InnerFW[Internal Firewalls]
         Server2[(Physical Server: Postgres Database)]
