@@ -4,36 +4,51 @@ graph TB
     subgraph User["End Users"]
 
         UI[react frontend in browser]
+
     end
 
     Firewall[App Firewall]
+
     LoadBalancer[cloud_load_balancer]
 
     subgraph PaaS["PaaS Setup (Azure)"]
+
         AppServer[Flask Web Server]
+
         Database[(Managed Postgres Database)]
+
     end
 
     UI --> Firewall --> LoadBalancer --> AppServer
-    AppServer --> Database
+
+    --> Database
 ```
 Iaas
 ```mermaid
+
 graph TB
+
     subgraph User["Enduser"]
+
         UI[React Frontend in Browser]
     end
 
     PerimeterFW[Network Firewall]
+
     CloudLB[Virtual Load Balancer]
 
     subgraph IaaS["IaaS Setup (AWS EC2, Azure VM, GCP Compute)"]
+
         VM1[VM running Flask + React]
+
         InternalFW[Internal Firewall]
+
         VM2[(VM running Postgres Database)]
+
     end
 
     UI --> PerimeterFW --> CloudLB --> VM1
+
     VM1 --> InternalFW --> VM2
 ```
 On-Prem
@@ -110,4 +125,3 @@ In an On-Premises setup, the application is hosted on physical servers located i
 - Higher upfront costs and maintenance compared to cloud solutions
 
 ---
-
