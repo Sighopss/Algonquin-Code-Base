@@ -1,12 +1,12 @@
 PaaS
 ```mermaid
 graph TB
-    subgraph User["End User"]
+    subgraph User["End Users"]
         UI[react frontend in browser]
     end
 
-    Firewall[Application Firewall]
-    LoadBalancer[cloud load balancer]
+    Firewall[App Firewall]
+    LoadBalancer[cloud_load_balancer]
 
     subgraph PaaS["PaaS Setup (Azure)"]
         AppServer[Flask Web Server]
@@ -56,7 +56,7 @@ graph TB
 ```
 # Web Application Deployment Guide
 
-The document describes how a web application consisting of a **React frontend**, **Flask backend**, and **Postgres database** can be deployed using different infrastructure models: **PaaS**, **IaaS**, and **On-Premises**.
+This document describes how a web application consisting of a **React frontend**, **Flask backend**, and **Postgres database** can be deployed using different infrastructure models: **PaaS**, **IaaS**, and the one **On-Premises**.
 
 ---
 
@@ -67,7 +67,7 @@ In a PaaS deployment, the cloud provider manages most of the infrastructure, all
 - The **React frontend** runs in the users browser 
 - The **Flask backend** is deployed as a managed application service  
 - **Postgres** is provided as a managed database service by the cloud provider
-- **Application-level firewalls** protect the services, and a **cloud load balancer** distributes incoming traffic automatically
+- **Application-level firewalls** protect the services, and a **cloud load balancer** distributes incoming traffic automatically(prevent DDOS)
 
 **Key Points:**  
 - The cloud provider handles servers, operating system updates, scaling, and high availabilities
@@ -109,6 +109,3 @@ In an On-Premises setup, the application is hosted on physical servers located i
 - Higher upfront costs and maintenance compared to cloud solutions
 
 ---
-
-
-
