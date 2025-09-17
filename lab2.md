@@ -1,27 +1,27 @@
 PaaS
 ```mermaid
 graph TB
-    subgraph User["End Users"]
+    subgraph User["End_Users"]
 
-        UI[react frontend in browser]
-
-    end
-
-    Firewall[App Firewall]
-
-    LoadBalancer[cloud_load_balancer]
-
-    subgraph PaaS["PaaS Setup (Azure)"]
-
-        AppServer[Flask Web Server]
-
-        Database[(Managed Postgres Database)]
+        User_interface[react_frontend_in_browser]
 
     end
 
-    UI --> Firewall --> LoadBalancer --> AppServer
+    Firewall[App_Firewall]
 
-    --> Database
+    loadbalancer[cloud_load_balancer]
+
+    subgraph PaaS["PaaS_Setup (Azure)"]
+
+        AppServers[Flask_Web_Server]
+
+        databases[(Managed_Postgres_Database)]
+
+    end
+
+    User_interface --> Firewall --> loadbalancer --> AppServers
+
+    --> databases
 ```
 Iaas
 ```mermaid
@@ -30,26 +30,26 @@ graph TB
 
     subgraph User["Enduser"]
 
-        UI[React Frontend in Browser]
+        User_Interface[React_Frontend_in_Browser]
     end
 
-    PerimeterFW[Network Firewall]
+    Perimeter_FW[Network_Firewall]
 
-    CloudLB[Virtual Load Balancer]
+    Cloud_LB[Virtual_Load_Balancer]
 
     subgraph IaaS["IaaS Setup (AWS EC2, Azure VM, GCP Compute)"]
 
-        VM1[VM running Flask + React]
+        VM_1[VM running Flask + React]
 
-        InternalFW[Internal Firewall]
+        Internal_FW[Internal Firewall]
 
-        VM2[(VM running Postgres Database)]
+        VM_2[(VM running Postgres Database)]
 
     end
 
-    UI --> PerimeterFW --> CloudLB --> 
+    User_Interface --> Perimeter_FW --> Cloud_LB --> 
 
-    VM1 --> InternalFW --> VM2
+    VM_1 --> Internal_FW --> VM_2
 ```
 On-Prem
 ```mermaid
@@ -58,26 +58,26 @@ graph TB
 
     subgraph User["End_User"]
 
-        UI[react frontend in browser]
+        User_Interface[react frontend in browser]
 
 
     end
 
-    OuterFW[Perimeter Firewall]
+    Outer_FW[Perimeter Firewall]
 
-    HardwareLB[On-Prem Load Balancer]
+    Hardware_LB[On-Prem Load Balancer]
 
     subgraph OnPrem["On-Premise Setup (Data_Center)"]
 
-        Server1[Physical Server: Flask + React]
+        Server_1[Physical Server: Flask + React]
 
-        InnerFW[Internal Firewalls]
-        Server2[(Physical Server: Postgres Database)]
+        Inner_FW[Internal Firewalls]
+        Server_2[(Physical Server: Postgres Database)]
 
     end
 
-    UI --> OuterFW --> HardwareLB --> Server1
-    --> InnerFW --> Server2
+    User_Interface --> Outer_FW --> Hardware_LB --> Server_1
+    --> Inner_FW --> Server_2
 ```
 # Web Application Deployment Guide
 
