@@ -1,3 +1,4 @@
+PaaS
 ```mermaid
 graph TB
     subgraph User["End User"]
@@ -7,7 +8,7 @@ graph TB
     Firewall[Application Firewall]
     LoadBalancer[Cloud Load Balancer]
 
-    subgraph PaaS["PaaS Setup (e.g. Heroku, Azure App Service, Render)"]
+    subgraph PaaS["PaaS Setup (Azure)"]
         AppServer[Flask Web Server]
         Database[(Managed Postgres Database)]
     end
@@ -37,16 +38,16 @@ graph TB
 On-Prem
 ```mermaid
 graph TB
-    subgraph User["End User"]
+    subgraph User["End_User"]
         UI[React Frontend in Browser]
     end
 
     OuterFW[Perimeter Firewall]
     HardwareLB[On-Prem Load Balancer]
 
-    subgraph OnPrem["On-Premise Setup (Company Data Center)"]
+    subgraph OnPrem["On-Premise Setup (The Data Center)"]
         Server1[Physical Server: Flask + React]
-        InnerFW[Internal Firewall]
+        InnerFW[Internal Firewalls]
         Server2[(Physical Server: Postgres Database)]
     end
 
