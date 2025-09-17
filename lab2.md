@@ -2,6 +2,7 @@ PaaS
 ```mermaid
 graph TB
     subgraph User["End Users"]
+
         UI[react frontend in browser]
     end
 
@@ -109,3 +110,4 @@ In an On-Premises setup, the application is hosted on physical servers located i
 - Higher upfront costs and maintenance compared to cloud solutions
 
 ---
+
