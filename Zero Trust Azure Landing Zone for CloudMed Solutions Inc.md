@@ -58,7 +58,7 @@
 
 ## Network Archhitecture - Hub and Spoke with zero trust 
 
-###Topology Overview
+### Topology Overview
   - **Hub Vnet** (Canada Central and west europe - peered)
   - Azure firewall premium (with IDPS and TLS inspection)
   - Private dns zones (Privatelink.*)
